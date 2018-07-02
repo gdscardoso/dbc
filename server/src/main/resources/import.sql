@@ -1,0 +1,4 @@
+INSERT INTO risco VALUE ('A', 0.019);
+INSERT INTO risco VALUE ('B', 0.050);
+INSERT INTO risco VALUE ('C', 0.100);
+COMMIT;

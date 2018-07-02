@@ -1,0 +1,52 @@
+<mat-card>
+  <mat-card-title>Editar de Clientes</mat-card-title>
+  <mat-card-content>
+
+    <form [formGroup]="form">
+
+      <div class="container" style="padding: 16px">
+
+        <mat-radio-group formControlName="tipo">
+          <mat-radio-button checked="true" value="COMUM" style="margin-right: 10px">Cliente Comum</mat-radio-button>
+          <mat-radio-button value="POTENCIAL" style="margin-right: 10px">Cliente Potencial</mat-radio-button>
+          <mat-radio-button value="ESPECIAL">Cliente Especial</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field>
+          <input matInput placeholder="Nome" formControlName="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Enereço" formControlName="endereco">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="number" matInput placeholder="Renda" formControlName="renda">
+        </mat-form-field>
+
+        <mat-radio-group formControlName="empregado" *ngIf="form.value.tipo === 'COMUM'">
+          <mat-radio-button checked="true" value="true" style="margin-right: 10px">Cliente está empregado</mat-radio-button>
+          <mat-radio-button value="false">Cliente não está empregado</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field *ngIf="form.value.tipo === 'POTENCIAL'">
+          <input type="number" matInput placeholder="Valor Dívidas" formControlName="valorDividas">
+        </mat-form-field>
+
+        <mat-form-field *ngIf="form.value.tipo === 'ESPECIAL'">
+          <input type="number" matInput placeholder="Valor Patrimonio" formControlName="valorPatrimonio">
+        </mat-form-field>
+
+      </div>
+
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button mat-raised-button routerLink="['']">Voltar</button>
+    <button mat-raised-button color="accent" [disabled]="form.invalid" (click)="salvar()">Salvar</button>
+  </mat-card-actions>
+</mat-card>
+
+
+

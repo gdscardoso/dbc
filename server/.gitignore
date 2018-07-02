@@ -1,0 +1,66 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/src/main/angular/dist
+/src/main/angular/tmp
+/src/main/angular/out-tsc
+
+# dependencies
+/src/main/angular/node_modules
+
+# IDEs and editors
+/src/main/angular/.idea
+/src/main/angular/.project
+/src/main/angular/.classpath
+/src/main/angular/.c9/
+/src/main/angular/*.launch
+/src/main/angular/.settings/
+/src/main/angular/*.sublime-workspace
+
+# IDE - VSCode
+/src/main/angular.vscode/*
+/src/main/angular/!.vscode/settings.json
+/src/main/angular/!.vscode/tasks.json
+/src/main/angular/!.vscode/launch.json
+/src/main/angular/!.vscode/extensions.json
+
+# misc
+/src/main/angular/.sass-cache
+/src/main/angular/connect.lock
+/src/main/angular/coverage
+/src/main/angular/libpeerconnection.log
+/src/main/angular/npm-debug.log
+/src/main/angular/yarn-error.log
+/src/main/angular/testem.log
+/src/main/angular/typings
+
+# System Files
+/src/main/angular/.DS_Store
+/src/main/angular/Thumbs.db

@@ -1,0 +1,9 @@
+<h4 matDialogTitle>Confirmação</h4>
+<mat-dialog-content>
+  {{ message }}
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button matDialogClose>Cancelar</button>
+  <button mat-raised-button color="accent" (click)="confirmar()">Confirmar</button>
+</mat-dialog-actions>

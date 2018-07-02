@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>Lista de Clientes</mat-card-title>
+  <mat-card-content>
+
+    <mat-list>
+      <mat-list-item *ngFor="let cliente of clientes">
+        <mat-icon matListIcon>person</mat-icon>
+        <h4 matLine>{{cliente.nome}}</h4>
+        <h2 matLine>Renda mensal {{cliente.renda | currency:'R$'}}</h2>
+        <p matLine class="demo-2">Endereço {{ cliente.endereco }} </p>
+
+        <button mat-raised-button (click)="simular(cliente)" color="accent" style="margin-right: 6px">
+          Simular
+        </button>
+
+        <button mat-raised-button style="margin-right: 6px" (click)="editar(cliente)">
+          Editar
+        </button>
+
+        <button mat-raised-button color="warn" (click)="excluir(cliente)">
+          Excluir
+        </button>
+
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+
+
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="accent" (click)="novo($event)">Novo</button>
+  </mat-card-actions>
+</mat-card>
