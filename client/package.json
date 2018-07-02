@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "rimraf ../src/main/resources/static && mkdirp ../src/main/resources/static",
-    "deploy": "copyfiles -f dist/dbc-project-front/** ../src/main/resources/static"
+    "predeploy": "rimraf ../server/src/main/resources/static && mkdirp ../server//src/main/resources/static",
+    "deploy": "copyfiles -f dist/dbc-project-front/** ../server/src/main/resources/static"
   },
   "private": true,
   "dependencies": {
